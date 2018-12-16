@@ -1,0 +1,7 @@
+$ docker pull mysql
+$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=mysql -d -p 3306:3306 mysql
+$ docker exec -it mysql bash
+mysql> create database test_db;
+mysql> create table test_db.personal(id int, name varchar(20));
+mysql> exit
+$ pip install mysql-connector-python
